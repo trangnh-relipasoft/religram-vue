@@ -1,4 +1,4 @@
-# religram-vue
+# religram
 
 ## Project setup
 ```

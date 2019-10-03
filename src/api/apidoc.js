@@ -1,0 +1,1 @@
+export const HOST = "https://khoa123.herokuapp.com/api/v1";
