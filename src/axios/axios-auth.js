@@ -1,8 +1,9 @@
 import axios from 'axios';
+import {HOST} from "../api/apidoc";
 
 
 const auth = axios.create({
-    baseURL: "https://khoa123.herokuapp.com" + "/api/v1/auth",
+    baseURL: HOST + "/auth",
     timeout: 2000,
     // withCredentials: true
 });

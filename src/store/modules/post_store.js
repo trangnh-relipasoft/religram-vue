@@ -17,8 +17,12 @@ const mutations = {
 };
 const actions = {
     loadPosts({commit}, page) {
-        console.log(page);
-        return post_axios.get('/post?page=' + page).then((response) => {
+        // let headers = 'Bearer ' +store.getters.getToken;
+        return post_axios.get('/post?page=' + page, {
+            // headers: {
+            //     Authorization: headers
+            // }
+        }).then((response) => {
             console.log(response)
             // if (response.status === 200) {
             //     console.log(response);

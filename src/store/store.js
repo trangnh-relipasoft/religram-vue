@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import post from './store/modules/post_store'
-import * as types from "./store/types";
+import post from './modules/post_store'
+import * as types from "./types";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
     state: {
         username: "",
         fullname: "",
@@ -14,6 +14,9 @@ export default new Vuex.Store({
     },
     getters: {
         [types.TOKEN]: state => {
+            return state.token
+        },
+        getToken: state => {
             return state.token
         }
     },
@@ -54,5 +57,5 @@ export default new Vuex.Store({
     }, modules: {
         post
     }
-})
+});
 

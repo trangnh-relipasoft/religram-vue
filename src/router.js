@@ -9,6 +9,7 @@ import Verify from './views/Verify.vue';
 import Reset from './views/Reset';
 import Homepage from "./views/Homepage";
 import Profile from "./views/Profile";
+import EditProfile from "./views/EditProfile";
 
 Vue.use(Router);
 
@@ -64,7 +65,13 @@ export default new Router({
             path: '/profile',
             name: 'profile',
             component: Profile
+        },
+        {
+            path: 'editprofile',
+            name: 'editprofile',
+            component: EditProfile
+        }, {
+            path: "/*", redirect: "homepage"
         }
-
     ]
 })
